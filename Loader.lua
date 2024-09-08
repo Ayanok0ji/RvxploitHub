@@ -1,5 +1,5 @@
 local Games = {
-    [5130598377] = "https://raw.githubusercontent.com/Ayanok0ji/RvxploitHub/main/Games/AUTPS.lua",
+    [1782832995] = "https://raw.githubusercontent.com/Ayanok0ji/RvxploitHub/main/Games/AUTPS.lua",
 }
 local script = function() 
     if Games[game.PlaceId] then return game:HttpGet(Games[game.PlaceId]) 
