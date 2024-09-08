@@ -1,17 +1,14 @@
-local Games = {
-    [1782832995] = "https://raw.githubusercontent.com/Ayanok0ji/RvxploitHub/main/Games/AUTPS.lua"
+repeat task.wait(0.25) until game:IsLoaded();
+getgenv().CurrentVersion = "1.05";
+
+local Supported = {
+    A_Universal_Time = {6846458508,5130598377};
+    Heaven_Stand = {14561998168};
+
 }
 
-local script = function()
-    local url = Games[game.PlaceId]
-    
-    if url then 
-        return game:HttpGet(url)
-    else 
-        return "No script available for this game."
-    end
+if table.find(Supported.A_Universal_Time,game.PlaceId) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvl9999/FlamesW/new/AUT"))();
+elseif table.find(Supported.Heaven_Stand,game.PlaceId) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvl9999/FlamesW/new/HS"))();
 end
-
--- Usage
-local scriptContent = script()
-print(scriptContent)
